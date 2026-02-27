@@ -106,13 +106,14 @@
     }
 
     .logo {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -.5px;
+      display: flex;
+      align-items: center;
     }
 
-    .logo span { color: var(--teal); }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
 
     .nav-links {
       display: flex;
@@ -559,7 +560,7 @@
   <!-- ─── Navigation ─────────────────────────────────────────── -->
   <nav aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="#hero" class="logo" aria-label="MGK Technical Limited home">MGK<span>Technical</span></a>
+      <a href="#hero" class="logo" aria-label="MGK Technical Limited home"><img src="MGK Tech Logo.png" alt="MGK Technical Limited" /></a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why Us</a></li>
