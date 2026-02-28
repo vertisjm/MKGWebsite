@@ -12,6 +12,11 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mgktech.co.uk/" />
 
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-ancestors 'none';" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
   <!-- Open Graph (LinkedIn, Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mgktech.co.uk/" />
@@ -560,7 +565,7 @@
   <!-- ─── Navigation ─────────────────────────────────────────── -->
   <nav aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="#hero" class="logo" aria-label="MGK Technical Limited home"><img src="edited-photo.png" alt="MGK Technical Limited" /></a>
+      <a href="#hero" class="logo" aria-label="MGK Technical Limited home"><img src="edited-logo.png" alt="MGK Technical Limited" /></a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#why-us">Why Us</a></li>
@@ -801,17 +806,17 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" maxlength="100" />
             </div>
             <div class="form-group">
               <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Acme Ltd" autocomplete="organization" />
+              <input type="text" id="company" name="company" placeholder="Acme Ltd" autocomplete="organization" maxlength="100" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@acme.co.uk" required autocomplete="email" />
+            <input type="email" id="email" name="email" placeholder="jane@acme.co.uk" required autocomplete="email" maxlength="254" />
           </div>
 
           <div class="form-group">
@@ -828,7 +833,7 @@
 
           <div class="form-group">
             <label for="message">Tell Us About Your Project</label>
-            <textarea id="message" name="message" placeholder="Brief overview of what you're looking to achieve…"></textarea>
+            <textarea id="message" name="message" placeholder="Brief overview of what you're looking to achieve…" maxlength="2000"></textarea>
           </div>
 
           <button type="submit" class="btn-send">Send Enquiry &rarr;</button>
